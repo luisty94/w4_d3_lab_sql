@@ -9,6 +9,6 @@ CREATE TABLE artists (
 CREATE TABLE albums (
     id SERIAL PRIMARY KEY,
     title VARCHAR(255),
-    artist INT REFERENCES artists(id),
+    artist INT NOT NULL REFERENCES artists(id) ON DELETE CASCADE,
     genre VARCHAR(255)
 );
